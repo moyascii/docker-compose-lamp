@@ -1,3 +1,9 @@
+# Crear carpeta el C: que se llame Projects
+# Clonar el repositorio (git clone https://github.com/moyascii/docker-compose-lamp.git) dentro de projects (Se creará una carpeta llamada docker-compose-lamp)
+# hacer una copia del -copy.env
+# dejar la copia como .env
+# Dentro de docker-compose-lamp digitar 'docker compose up -d'
+
 # LAMP stack built with Docker Compose
 
 ![Landing Page](https://user-images.githubusercontent.com/43859895/141092846-905eae39-0169-4fd7-911f-9ff32c48b7e8.png)
