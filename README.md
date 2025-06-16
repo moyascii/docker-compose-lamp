@@ -2,6 +2,7 @@
 # Clonar el repositorio (git clone https://github.com/moyascii/docker-compose-lamp.git) dentro de projects (Se creará una carpeta llamada docker-compose-lamp)
 # hacer una copia del -copy.env
 # dejar la copia como .env
+# en .env cambiar de php3 a php2, ya ya que es el que más usamos.
 # Dentro de docker-compose-lamp digitar 'docker compose up -d'
 
 # LAMP stack built with Docker Compose
