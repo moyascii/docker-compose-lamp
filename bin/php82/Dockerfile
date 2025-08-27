@@ -99,8 +99,16 @@ RUN a2enmod ssl && a2enmod rewrite
 # Enable apache modules
 RUN a2enmod rewrite headers
 
+# Eliminar advertencia de Apache
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 # Cleanup
 RUN rm -rf /usr/src/*
+# ⚠️ FIX para repositorios de Debian Buster (necesario para instalar nodejs)
+RUN sed -i 's|http://deb.debian.org|http://archive.debian.org|g' /etc/apt/sources.list && \
+    sed -i '/security.debian.org/d' /etc/apt/sources.list
+
 # Instala Node.js 20 y npm
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-    && apt-get install -y nodejs
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get update && apt-get install -y nodejs
+

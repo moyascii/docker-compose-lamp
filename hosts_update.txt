@@ -1,0 +1,11 @@
+# Agregar esta línea a tu archivo hosts para resolver api.edicloud.cl localmente
+# 
+# En Windows: C:\Windows\System32\drivers\etc\hosts
+# En macOS/Linux: /etc/hosts
+#
+# Agrega esta línea:
+
+127.0.0.1    api.edicloud.cl
+
+# Esto permite que tu navegador resuelva api.edicloud.cl a localhost
+# para que funcione el VirtualHost de Apache
